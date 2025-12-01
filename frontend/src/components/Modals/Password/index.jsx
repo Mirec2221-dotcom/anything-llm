@@ -8,7 +8,6 @@ import {
   AUTH_TIMESTAMP,
 } from "../../../utils/constants";
 import useLogo from "../../../hooks/useLogo";
-import illustration from "@/media/illustrations/login-illustration.svg";
 
 export default function PasswordModal({ mode = "single" }) {
   const { loginLogo } = useLogo();
@@ -26,20 +25,21 @@ export default function PasswordModal({ mode = "single" }) {
         }}
         className="absolute left-0 top-0 z-0 h-full w-full"
       />
+      {/* Left side - Large Logo */}
       <div className="hidden md:flex md:w-1/2 md:h-full md:items-center md:justify-center">
         <img
-          className="w-full h-full object-contain z-50"
-          src={illustration}
-          alt="login illustration"
+          src={loginLogo}
+          alt="VladAI Logo"
+          className="max-w-[400px] max-h-[400px] object-contain z-50"
         />
       </div>
-      <div className="flex flex-col items-center justify-center h-full w-full md:w-1/2 z-50 relative md:-mt-20 mt-0 !border-none bg-theme-bg-secondary md:bg-transparent">
+      {/* Right side - Login Form */}
+      <div className="flex flex-col items-center justify-center h-full w-full md:w-1/2 z-50 relative mt-0 !border-none bg-theme-bg-secondary md:bg-transparent">
+        {/* Show small logo only on mobile */}
         <img
           src={loginLogo}
           alt="Logo"
-          className={`hidden relative md:flex rounded-2xl w-fit m-4 z-30 ${
-            mode === "single" ? "md:top-2" : "md:top-12"
-          } absolute max-h-[65px]`}
+          className="md:hidden rounded-2xl w-fit m-4 z-30 max-h-[120px] mb-8"
           style={{ objectFit: "contain" }}
         />
         {mode === "single" ? <SingleUserAuth /> : <MultiUserAuth />}

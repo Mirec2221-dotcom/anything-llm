@@ -70,17 +70,12 @@ export default function SingleUserAuth() {
   return (
     <>
       <form onSubmit={handleLogin}>
-        <div className="flex flex-col justify-center items-center relative rounded-2xl bg-theme-bg-secondary md:shadow-[0_4px_14px_rgba(0,0,0,0.25)] md:px-12 py-12 -mt-36 md:-mt-10">
-          <div className="flex items-start justify-between pt-11 pb-9 rounded-t">
-            <div className="flex items-center flex-col gap-y-4">
-              <div className="flex gap-x-1">
-                <h3 className="text-md md:text-2xl font-bold text-white text-center white-space-nowrap hidden md:block">
-                  {t("login.multi-user.welcome")}
-                </h3>
-                <p className="text-4xl md:text-2xl font-bold bg-gradient-to-r from-[#75D6FF] via-[#FFFFFF] light:via-[#75D6FF] to-[#FFFFFF] light:to-[#75D6FF] bg-clip-text text-transparent">
-                  {customAppName || "VladAI"}
-                </p>
-              </div>
+        <div className="flex flex-col justify-center items-center relative rounded-2xl bg-theme-bg-secondary md:shadow-[0_4px_14px_rgba(0,0,0,0.25)] md:px-12 py-12">
+          <div className="flex items-start justify-between pt-6 pb-6 rounded-t">
+            <div className="flex items-center flex-col gap-y-2">
+              <h3 className="text-2xl md:text-3xl font-bold text-white text-center">
+                {t("login.multi-user.welcome")} {customAppName || "VladAI"}
+              </h3>
               <p className="text-sm text-theme-text-secondary text-center">
                 {t("login.sign-in.start")} {customAppName || "VladAI"}{" "}
                 {t("login.sign-in.end")}
