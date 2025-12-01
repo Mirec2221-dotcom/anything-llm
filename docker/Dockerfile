@@ -131,6 +131,7 @@ WORKDIR /app
 # Install & Build frontend layer
 FROM build AS frontend-build
 COPY --chown=anythingllm:anythingllm ./frontend /app/frontend/
+COPY --chown=anythingllm:anythingllm ./branding /app/branding/
 WORKDIR /app/frontend
 RUN yarn install --network-timeout 100000 && yarn cache clean
 RUN yarn build && \
