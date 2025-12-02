@@ -10,6 +10,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Login from "@/pages/Login";
 import SimpleSSOPassthrough from "@/pages/Login/SSO/simple";
+import EntraComplete from "@/pages/Auth/Entra/Complete";
 import OnboardingFlow from "@/pages/OnboardingFlow";
 import i18n from "./i18n";
 
@@ -115,6 +116,10 @@ export default function App() {
                     <Route
                       path="/sso/simple"
                       element={<SimpleSSOPassthrough />}
+                    />
+                    <Route
+                      path="/auth/entra/complete"
+                      element={<EntraComplete />}
                     />
 
                     <Route

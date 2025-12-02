@@ -6,6 +6,7 @@ import ModalWrapper from "@/components/ModalWrapper";
 import { useModal } from "@/hooks/useModal";
 import RecoveryCodeModal from "@/components/Modals/DisplayRecoveryCodeModal";
 import { useTranslation } from "react-i18next";
+import EntraLoginButton from "@/components/EntraLogin";
 
 export default function SingleUserAuth() {
   const { t } = useTranslation();
@@ -107,6 +108,7 @@ export default function SingleUserAuth() {
                 ? t("login.multi-user.validating")
                 : t("login.multi-user.login")}
             </button>
+            <EntraLoginButton />
           </div>
         </div>
       </form>

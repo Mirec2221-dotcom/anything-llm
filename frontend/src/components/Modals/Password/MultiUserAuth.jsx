@@ -8,6 +8,7 @@ import { useModal } from "@/hooks/useModal";
 import RecoveryCodeModal from "@/components/Modals/DisplayRecoveryCodeModal";
 import { useTranslation } from "react-i18next";
 import { t } from "i18next";
+import EntraLoginButton from "@/components/EntraLogin";
 
 const RecoveryForm = ({ onSubmit, setShowRecoveryForm }) => {
   const [username, setUsername] = useState("");
@@ -336,6 +337,7 @@ export default function MultiUserAuth() {
               {t("login.multi-user.forgot-pass")}?
               <b>{t("login.multi-user.reset")}</b>
             </button>
+            <EntraLoginButton />
           </div>
         </div>
       </form>
